@@ -12,3 +12,5 @@ currencyElementOne.addEventListener("change", calculate);
 amountElementOne.addEventListener("input", calculate);
 currencyElementTwo.addEventListener("change", calculate);
 amountElementTwo.addEventListener("input", calculate);
+
+calculate();
