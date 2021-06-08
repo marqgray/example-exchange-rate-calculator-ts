@@ -1,7 +1,15 @@
-const currencyElementOne = document.getElementById("currency-one");
-const amountElementOne = document.getElementById("amount-one");
-const currencyElementTwo = document.getElementById("currency-two");
-const amountElementTwo = document.getElementById("amount-two");
+const currencyElementOne: HTMLSelectElement = <HTMLSelectElement>(
+  document.getElementById("currency-one")
+);
+const amountElementOne: HTMLInputElement = <HTMLInputElement>(
+  document.getElementById("amount-one")
+);
+const currencyElementTwo: HTMLSelectElement = <HTMLSelectElement>(
+  document.getElementById("currency-two")
+);
+const amountElementTwo: HTMLInputElement = <HTMLInputElement>(
+  document.getElementById("amount-two")
+);
 
 const rateElement = document.getElementById("rate");
 const swap = document.getElementById("swap");
