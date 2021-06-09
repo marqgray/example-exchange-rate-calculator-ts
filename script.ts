@@ -24,7 +24,7 @@ const calculate = () => {
     .then((res) => res.json())
     .then((data: ExchangeRateApiResult) => {
       const rate = Number(data.conversion_rates[currencyTwo]);
-      rateElement.innerText = `1 ${currencyOne} = ${rate} ${currencyTwo}`;
+      rateElement.innerText = `${amountElementOne.value} ${currencyOne} = ${rate} ${currencyTwo}`;
 
       amountElementTwo.value = (Number(amountElementOne.value) * rate).toFixed(
         2
@@ -36,5 +36,12 @@ currencyElementOne.addEventListener("change", calculate);
 amountElementOne.addEventListener("input", calculate);
 currencyElementTwo.addEventListener("change", calculate);
 amountElementTwo.addEventListener("input", calculate);
+
+swap.addEventListener("click", () => {
+  const temp = currencyElementOne.value;
+  currencyElementOne.value = currencyElementTwo.value;
+  currencyElementTwo.value = temp;
+  calculate();
+});
 
 calculate();
