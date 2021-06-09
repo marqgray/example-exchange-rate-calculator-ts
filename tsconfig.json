@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "module": "none",
+    "target": "es5",
+    "sourceMap": true,
+    "typeRoots": [
+      "defs/exchange-rate-api-defs.d.ts"
+    ]
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
